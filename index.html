@@ -14,29 +14,47 @@
     box-sizing:border-box;
 }
 
+html,
 body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
     background:#000;
     color:#fff;
-    font-family:Arial, Helvetica, sans-serif;
-    min-height:100vh;
 }
 
 .container{
     display:flex;
-    min-height:100vh;
+    width:100%;
+    height:100vh;
 }
 
 /* FOTO */
 
 .image-section{
     width:65%;
-    overflow:hidden;
+    background:
+        radial-gradient(circle at 20% 20%, #00c853 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, #ff00aa 0%, transparent 40%),
+        radial-gradient(circle at 50% 80%, #ffd600 0%, transparent 40%),
+        #000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .image-section img{
-    width:100%;
-    height:100vh;
-    object-fit:cover;
+
+    max-width:100%;
+    max-height:100%;
+
+    width:auto;
+    height:auto;
+
+    object-fit:contain;
+
     display:block;
 }
 
@@ -44,129 +62,108 @@ body{
 
 .content{
     width:35%;
-    background:#060606;
+    background:#050505;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
 
-    padding:80px 60px;
+    padding:50px;
 }
 
 .badge{
+
     display:inline-block;
     width:fit-content;
 
-    padding:12px 24px;
+    padding:10px 22px;
 
     border:1px solid #d9bb54;
     border-radius:999px;
 
     color:#d9bb54;
 
-    font-size:14px;
+    font-size:13px;
     letter-spacing:3px;
-    margin-bottom:40px;
-}
-
-h1{
-    font-size:82px;
-    line-height:0.95;
-    font-weight:900;
 
     margin-bottom:35px;
 }
 
-.highlight{
-    color:#ffd84d;
+h1{
+
+    font-size:72px;
+    line-height:0.92;
+    font-weight:900;
+
+    margin-bottom:30px;
 }
 
 h2{
+
     color:#ffd84d;
 
-    font-size:28px;
+    font-size:22px;
     line-height:1.4;
 
-    font-weight:700;
-
-    margin-bottom:45px;
+    margin-bottom:35px;
 }
 
 p{
+
     color:#d0d0d0;
 
-    font-size:20px;
-    line-height:1.9;
+    font-size:18px;
+    line-height:1.8;
 
-    margin-bottom:55px;
-}
-
-.button{
-    display:inline-block;
-
-    width:fit-content;
-
-    padding:18px 34px;
-
-    border:1px solid #ffd84d;
-    border-radius:999px;
-
-    color:#ffd84d;
-    text-decoration:none;
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    transition:all .3s ease;
-}
-
-.button:hover{
-    background:#ffd84d;
-    color:#000;
+    margin-bottom:40px;
 }
 
 .domain{
-    margin-top:60px;
 
-    color:#666;
+    color:#777;
 
-    letter-spacing:4px;
+    font-size:15px;
 
-    font-size:16px;
+    letter-spacing:5px;
+
+    margin-top:15px;
 }
 
-/* MOBIEL */
+/* Mobiel */
 
-@media(max-width:1000px){
+@media(max-width:1100px){
+
+    body{
+        overflow:auto;
+    }
 
     .container{
         flex-direction:column;
+        height:auto;
     }
 
     .image-section{
         width:100%;
-    }
-
-    .image-section img{
-        height:60vh;
+        height:55vh;
     }
 
     .content{
         width:100%;
-        padding:50px 30px;
+        padding:40px 30px;
     }
 
     h1{
-        font-size:58px;
+        font-size:52px;
     }
 
     h2{
-        font-size:24px;
+        font-size:20px;
     }
 
     p{
-        font-size:18px;
+        font-size:16px;
     }
+
 }
 
 </style>
@@ -177,7 +174,10 @@ p{
 <div class="container">
 
     <div class="image-section">
-        <img src="doemaarnormaal.png" alt="Doe Maar Normaal">
+
+        <img src="doemaarnormaal.png"
+             alt="Doe Maar Normaal">
+
     </div>
 
     <div class="content">
@@ -201,10 +201,6 @@ p{
             Eigen interpretaties.<br>
             Terug naar de essentie.
         </p>
-
-        <a href="#" class="button">
-            BINNENKORT MEER
-        </a>
 
         <div class="domain">
             doemaarnormaal.nl
