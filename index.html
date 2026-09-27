@@ -14,156 +14,143 @@
     box-sizing:border-box;
 }
 
-html,
 body{
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#000;
-    color:#fff;
+    font-family:'Segoe UI',sans-serif;
+    color:white;
+    min-height:100vh;
 }
 
-.container{
-    display:flex;
+.hero{
+    position:relative;
     width:100%;
-    height:100vh;
-}
+    min-height:100vh;
 
-/* FOTO */
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,0.15) 0%,
+            rgba(0,0,0,0.15) 30%,
+            rgba(0,0,0,0.70) 65%,
+            rgba(0,0,0,0.95) 100%
+        ),
+        url('doemaarnormaal.png');
 
-.image-section{
-    width:65%;
-    background:
-        radial-gradient(circle at 20% 20%, #00c853 0%, transparent 40%),
-        radial-gradient(circle at 80% 20%, #ff00aa 0%, transparent 40%),
-        radial-gradient(circle at 50% 80%, #ffd600 0%, transparent 40%),
-        #000;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
 
     display:flex;
+    justify-content:flex-end;
     align-items:center;
-    justify-content:center;
 }
-
-.image-section img{
-
-    max-width:100%;
-    max-height:100%;
-
-    width:auto;
-    height:auto;
-
-    object-fit:contain;
-
-    display:block;
-}
-
-/* TEKST */
 
 .content{
-    width:35%;
-    background:#050505;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    width:45%;
+    max-width:650px;
 
-    padding:50px;
+    padding-right:8%;
+    padding-left:40px;
 }
 
 .badge{
 
     display:inline-block;
-    width:fit-content;
 
-    padding:10px 22px;
+    padding:10px 18px;
 
-    border:1px solid #d9bb54;
-    border-radius:999px;
+    border:1px solid rgba(255,255,255,0.25);
 
-    color:#d9bb54;
+    border-radius:100px;
 
-    font-size:13px;
-    letter-spacing:3px;
+    letter-spacing:2px;
 
-    margin-bottom:35px;
-}
+    font-size:0.8rem;
 
-h1{
-
-    font-size:72px;
-    line-height:0.92;
-    font-weight:900;
+    color:#FFD54A;
 
     margin-bottom:30px;
 }
 
-h2{
+h1{
 
-    color:#ffd84d;
+    font-size:5rem;
+    line-height:0.95;
+    margin-bottom:25px;
+    font-weight:900;
+}
 
-    font-size:22px;
-    line-height:1.4;
+.subtitle{
+
+    font-size:1.8rem;
+    color:#FFD54A;
 
     margin-bottom:35px;
 }
 
-p{
+.text{
 
-    color:#d0d0d0;
-
-    font-size:18px;
+    font-size:1.2rem;
     line-height:1.8;
 
-    margin-bottom:40px;
+    color:#EEEEEE;
 }
 
-.domain{
-
-    color:#777;
-
-    font-size:15px;
-
-    letter-spacing:5px;
-
-    margin-top:15px;
+.text p{
+    margin-bottom:20px;
 }
 
-/* Mobiel */
+.coming{
 
-@media(max-width:1100px){
+    margin-top:40px;
 
-    body{
-        overflow:auto;
-    }
+    letter-spacing:4px;
 
-    .container{
-        flex-direction:column;
-        height:auto;
-    }
+    color:#999;
 
-    .image-section{
-        width:100%;
-        height:55vh;
+    font-size:0.95rem;
+}
+
+.footer{
+
+    margin-top:60px;
+
+    color:#666;
+
+    font-size:0.9rem;
+}
+
+@media(max-width:1000px){
+
+    .hero{
+
+        justify-content:center;
+
+        align-items:flex-end;
     }
 
     .content{
+
         width:100%;
-        padding:40px 30px;
+        max-width:none;
+
+        padding:40px 30px 50px 30px;
+
+        background:rgba(0,0,0,0.60);
+        backdrop-filter:blur(10px);
     }
 
     h1{
-        font-size:52px;
+        font-size:3rem;
     }
 
-    h2{
-        font-size:20px;
+    .subtitle{
+        font-size:1.3rem;
     }
 
-    p{
-        font-size:16px;
+    .text{
+        font-size:1rem;
     }
-
 }
 
 </style>
@@ -171,14 +158,7 @@ p{
 
 <body>
 
-<div class="container">
-
-    <div class="image-section">
-
-        <img src="doemaarnormaal.png"
-             alt="Doe Maar Normaal">
-
-    </div>
+<section class="hero">
 
     <div class="content">
 
@@ -191,24 +171,40 @@ p{
             NORMAAL
         </h1>
 
-        <h2>
+        <div class="subtitle">
             Bekende nummers.<br>
             Nieuwe verhalen.
-        </h2>
+        </div>
 
-        <p>
-            Akoestische live-uitvoeringen.<br>
-            Eigen interpretaties.<br>
-            Terug naar de essentie.
-        </p>
+        <div class="text">
 
-        <div class="domain">
+            <p>
+                Een serie akoestische live-uitvoeringen
+                waarin zang, gitaar en beleving centraal staan.
+            </p>
+
+            <p>
+                Intiem. Eerlijk. Zonder overbodige opsmuk.
+            </p>
+
+            <p>
+                Momenteel wordt gewerkt aan repertoire,
+                arrangementen en opnames.
+            </p>
+
+        </div>
+
+        <div class="coming">
+            BINNENKORT MEER
+        </div>
+
+        <div class="footer">
             doemaarnormaal.nl
         </div>
 
     </div>
 
-</div>
+</section>
 
 </body>
 </html>
